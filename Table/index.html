@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Form Controls Demo</title>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-6">
+  <div class="max-w-3xl w-full bg-white border-2 border-gray-200 rounded-xl shadow-lg p-6">
+    <h1 class="text-2xl font-semibold text-gray-800 mb-6 text-center">Controls — Two column layout</h1>
+
+    <!-- Grid: 2 columns (label, control) -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-8 items-center">
+      <!-- Row 1: Button -->
+      <div class="text-gray-700 font-medium">Button</div>
+      <div>
+        <button class="px-4 py-2 bg-orange-500 hover:bg-orange-600 text-white rounded-md transition">
+          Click Me
+        </button>
+      </div>
+
+      <!-- Row 2: Radio Buttons -->
+      <div class="text-gray-700 font-medium">Radio buttons</div>
+      <div>
+        <fieldset class="flex gap-4 items-center" aria-label="choose role">
+          <label class="inline-flex items-center gap-2">
+            <input type="radio" name="role" value="dev" class="form-radio h-4 w-4 text-orange-500" checked>
+            <span class="text-gray-700">Developer</span>
+          </label>
+          <label class="inline-flex items-center gap-2">
+            <input type="radio" name="role" value="designer" class="form-radio h-4 w-4 text-orange-500">
+            <span class="text-gray-700">Designer</span>
+          </label>
+        </fieldset>
+      </div>
+
+      <!-- Row 3: Checkbox -->
+      <div class="text-gray-700 font-medium">Checkbox</div>
+      <div>
+        <label class="inline-flex items-center gap-2">
+          <input type="checkbox" class="form-checkbox h-5 w-5 text-orange-500">
+          <span class="text-gray-700">I agree to terms</span>
+        </label>
+      </div>
+
+      <!-- Row 4: Input Field -->
+      <div class="text-gray-700 font-medium">Input field</div>
+      <div>
+        <input type="text" placeholder="Enter your name"
+               class="w-full md:w-80 px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-orange-300" />
+      </div>
+
+      <!-- Row 5: Textarea -->
+      <div class="text-gray-700 font-medium">Text area</div>
+      <div>
+        <textarea rows="4" placeholder="Write something..."
+                  class="w-full md:w-80 px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-orange-300"></textarea>
+      </div>
+
+      <!-- Row 6: Toggle (styled with peer) -->
+      <div class="text-gray-700 font-medium">Toggle button</div>
+      <div>
+        <!-- hidden checkbox acts as toggle state -->
+        <div class="flex items-center gap-3">
+          <input id="toggle1" type="checkbox" class="peer sr-only" />
+          <label for="toggle1"
+                 class="w-14 h-8 rounded-full bg-gray-300 peer-checked:bg-orange-500 relative transition-colors cursor-pointer">
+            <span class="absolute top-0.5 left-0.5 w-7 h-7 rounded-full bg-white shadow transform peer-checked:translate-x-6 transition-transform"></span>
+          </label>
+          <span id="toggleLabel" class="text-sm text-gray-600 peer-checked:text-orange-600">Off</span>
+        </div>
+        <script>
+          // small script to update the label text (optional)
+          const toggle = document.getElementById('toggle1');
+          const toggleLabel = document.getElementById('toggleLabel');
+          toggle.addEventListener('change', () => {
+            toggleLabel.textContent = toggle.checked ? 'On' : 'Off';
+          });
+        </script>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
