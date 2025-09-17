@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script src="https://cdn.tailwindcss.com"></script>
+
+   <title>Document</title>
+</head>
+<body class="flex justify-center items-center bg-gray-800 w-45 mt-4">
+   <div> 
+      <h1 class="text-center text-white text-xl font-mono font-bold ">Register Form</h1>
+   <form class="border-2 rounded-md px-6 py-4 mt-4 bg-white shadow-2 font-bold">
+      <div class="flex space-x-6">
+         <!--FName-->
+         <div>
+            <label for="">First Name : </label>
+            <input type="text" placeholder="Enter your First Name" required class="border-2 rounded-md p-2">
+         </div>
+         <!--LName-->
+         <div>
+            <label for="">Last Name : </label>
+            <input type="text" placeholder="Enter your Last Name" class="border-2 rounded-md p-2">
+         
+         </div>
+         </div>
+         <!--Email-->
+         <div class="flex items-center mt-4 space-x-2">
+            <label for="">Email : </label>
+            <input type="email" placeholder="Enter your Email" required class="border-2 rounded-md p-2">
+         
+         </div>
+         <!--Mobile no-->
+          <div class="flex items-center mt-4">
+            <label for="">Mobile Number : </label>
+            <input type="number" placeholder="Enter your Mobile Number" required class="border-2 rounded-md p-2">
+         
+         </div>
+         <div class="flex space-x-6">
+         <!--Password-->
+         <div class="mt-4 relati">
+            <label for="">Password: </label>
+            <input type="password" placeholder="Enter your Password" required class="border-2 rounded-md p-2">
+            <span class="absolute inset-y-0 right-0 top-6 flex items-center pr-3 cursor-pointer" onclick="togglePasswordVisibility('password', 'togglePassword')">
+             <i id="togglePassword" class="fa fa-eye-slash text-gray-500"></i>
+            </span>
+         </div>
+         <!--Confirm password-->
+         <div class="mt-4">
+            <label for="">Confirm Password: </label>
+            <input type="password" id="password" placeholder="Confirm Password" required class="border-2 rounded-md p-2">
+         
+         </div>
+         </div>
+         <!--Marrital Status-->
+         <div class="mt-4 space-x-4">
+            <label for="">Marrital Status : </label>
+            <input type="radio" placeholder="" required  name="marrital status"> Married
+            <input type="radio" placeholder="" required  name="marrital status"> Single
+            <input type="radio" placeholder="" required  name="marrital status"> Prefer not to say
+
+
+         
+         </div>
+         <!--Address-->
+         <div class="mt-4">
+            <label for="">Address :</label>
+            <textarea name="address" id="" class="border-2 rounded-md p-2 w-full h-20"></textarea>
+         
+         </div>
+         <!--Description-->
+         <div class="mt-4">
+          <label for="">Description :</label>
+                      <textarea name="address" id="" class="border-2 rounded-md p-2 w-full h-20"></textarea>
+
+         </div>
+         <!--Checkbox-->
+          <div class="mt-4">
+            <input type="checkbox" required>
+         
+            <label for="">Terms and Conditions: </label>
+            
+         </div>
+         <!--button-->
+         <div class="flex justify-center space-x-6">
+         <button class="h-auto w-20 border-2 border-blue-500 rounded-md bg-blue-500 hover:bg-blue-700 mt-4" id="Add">Add</button>
+         <button class="h-auto w-20 border-2 border-blue-500 rounded-md bg-gray-100 hover:bg-blue-700 mt-4" id="Clear">Clear</button>
+         </div>
+
+      
+   </form>
+   </div>
+   
+</body>
+</html>
